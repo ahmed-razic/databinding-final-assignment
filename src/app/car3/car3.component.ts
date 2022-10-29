@@ -9,6 +9,7 @@ export class Car3Component implements OnInit {
   doorStatus: string = 'Open';
   isOpen: boolean = true;
   items: any = [];
+  inputText = '';
 
   constructor() {}
 
@@ -17,5 +18,9 @@ export class Car3Component implements OnInit {
   toggle() {
     this.isOpen = !this.isOpen;
     this.items.push(this.isOpen);
+  }
+
+  getText(event: Event) {
+    this.inputText = (<HTMLInputElement>event.target).value;
   }
 }

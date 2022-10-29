@@ -9,6 +9,9 @@
   car3 works!
 </p>
 <br />
+<input type="text" class="form-control" (input)="getText($event)" />
+<p>{{ inputText }}</p>
+<br />
 <button class="btn btn-primary" (click)="toggle()">Toggle</button>
 <br />
 <p *ngIf="isOpen; else defaultStatus">{{ doorStatus }}</p>
