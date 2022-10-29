@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Car2Component implements OnInit {
   carName: string = 'Golf';
   carVersion: number = 8;
+  carColor: string = 'red';
   isNew: boolean = true;
 
   constructor() {}

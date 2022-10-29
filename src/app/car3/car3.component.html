@@ -1,1 +1,23 @@
-<p>car3 works!</p>
+<p
+  [ngStyle]="{
+    backgroundColor: 'red',
+    color: 'white',
+    fontSize: '3rem',
+    padding: '1rem'
+  }"
+>
+  car3 works!
+</p>
+<br />
+<button class="btn btn-primary" (click)="toggle()">Toggle</button>
+<br />
+<p *ngIf="isOpen; else defaultStatus">{{ doorStatus }}</p>
+<br />
+<ng-template #defaultStatus>Closed</ng-template>
+<br />
+<p
+  *ngFor="let item of items; let i = index"
+  [ngClass]="{ first: i > 3, second: i > 5 }"
+>
+  {{ i }}: {{ item }}
+</p>

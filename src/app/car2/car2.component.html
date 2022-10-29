@@ -3,3 +3,8 @@
   {{ carName }} is version {{ carVersion }} and
   {{ isNew ? "is new." : "is used." }}
 </p>
+<p [innerText]="carName + ' ' + carVersion"></p>
+<br />
+<input type="text" [(ngModel)]="carColor" />
+<p>{{ carColor }}</p>
+<hr />
